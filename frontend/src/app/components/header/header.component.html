@@ -1,0 +1,8 @@
+<div class="flex justify-between">
+	<div>Facet</div>
+	<ul class="flex items-center">
+		<li *ngFor="let link of links" class="first:ml-0 ml-8">
+			<a href="{{ link.href }}">{{ link.title }}</a>
+		</li>
+	</ul>
+</div>
