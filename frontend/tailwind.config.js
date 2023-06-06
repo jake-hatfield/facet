@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				'tan-100': '#dfd7c5',
+				'tan-200': '#c7c0b0',
 			},
 		},
 	},

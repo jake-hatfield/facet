@@ -1,0 +1,35 @@
+<div attr.aria-expanded="{{ isModalActive }}">
+	<div
+		aria-hidden="true"
+		class="fixed inset-0 -top-20 z-40 h-[10000px] bg-neutral-500 opacity-75 lg:-top-12"
+		(click)="toggleModal()"
+	></div>
+	<aside
+		class="shadow-stack minimal-scrollbar fixed left-2 right-2 top-0 z-40 max-h-screen max-w-lg transform overflow-y-auto border-2 border-neutral-900 bg-cyan-100 md:left-1/2 md:top-1/2 md:max-h-screen md:w-full md:-translate-x-1/2 md:-translate-y-1/2 text-cyan-900"
+	>
+		<div
+			class="flex items-center justify-between border-b-2 border-neutral-900 px-3 pb-1.5 pt-3 md:px-5"
+		>
+			<header class="w-5/6 whitespace-normal">
+				<h5 class="mono text-base font-semibold md:text-lg">
+					{{ title }}
+				</h5>
+			</header>
+			<!-- close button -->
+			<app-button icon="heroXMark" (onButtonClick)="toggleModal()" title="Close" tooltipAlignment='end' type="icon"></app-button>
+		</div>
+		<div
+				class="minimal-scrollbar max-h-96 break-words py-5 px-3 md:px-5"
+			>
+				<ng-content select="[description]"></ng-content>
+			</div>
+
+		<!-- action -->
+		<div
+			*ngIf="hasAction"
+			class="flex justify-end border-t-2 border-neutral-950 bg-neutral-900 px-3 pb-3 pt-2 md:px-5"
+		>
+        <ng-content select="[action]"></ng-content>
+		</div>
+	</aside>
+</div>

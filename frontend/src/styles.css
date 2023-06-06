@@ -35,6 +35,18 @@ body {
 	@apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 
+.headline-base {
+	@apply display-font font-black;
+}
+
+.headline-primary {
+	@apply headline-base text-7xl leading-snug;
+}
+
+.headline-secondary {
+	@apply headline-base text-4xl leading-normal;
+}
+
 .link {
 	@apply ring-1 ring-transparent transition duration-150 hover:text-cyan-600 hover:underline focus:outline-none focus:ring-neutral-900;
 }

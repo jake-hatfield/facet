@@ -1,13 +1,19 @@
 <div class="sticky top-0 z-40 w-full border-b-2 border-neutral-950 pb-5">
 	<div class="content-section pt-4">
-		<div class="flex justify-between items-center">
-			<a href="/">
-				<h1 class="text-2xl display-font transform -rotate-3">@FACET</h1></a
+		<div class="flex items-center justify-between">
+			<a routerLink="/" class="hover:text-cyan-600">
+				<h1 class="display-font -rotate-3 transform text-2xl">@FACET</h1></a
 			>
 			<ul class="flex items-center font-bold">
-				<li><button>Search</button></li>
-				<li *ngFor="let link of links" class="ml-8">
-					<a href="{{ link.href }}" class="link">{{ link.title }}</a>
+				<li *ngFor="let link of links" class="ml-8 first:ml-0">
+					<a routerLink="{{ link.href }}" class="link">{{ link.title }}</a>
+				</li>
+				<li class="ml-8">
+					<app-button
+						icon="heroMagnifyingGlass"
+						title="Search jewelers"
+						(onButtonClick)="toggleModal()"
+					></app-button>
 				</li>
 			</ul>
 		</div>

@@ -1,5 +1,9 @@
 // angular
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
+
+// services
+import { UiService } from '../../services/ui.service';
 
 @Component({
 	selector: 'app-header',
@@ -10,11 +14,20 @@ export class HeaderComponent {
 		{ title: 'Home', href: '/' },
 		{ title: 'About', href: '/about' },
 	];
+	isModalActive = false;
+	subscription: Subscription;
 
-	@Input() expanded: boolean;
-	@Output() manualToggle = new EventEmitter();
+	constructor(private uiService: UiService) {
+		this.subscription = this.uiService
+			.onToggleModal()
+			.subscribe((value) => (this.isModalActive = value));
+	}
 
-	toggle() {
-		this.manualToggle.emit();
+	ngOnDestroy() {
+		this.subscription.unsubscribe();
+	}
+
+	toggleModal() {
+		this.uiService.toggleModal();
 	}
 }

@@ -1,3 +1,38 @@
-<button class="{{ classes }}" [disabled]="isInactive">
-	{{ title }}
-</button>
+<div class="relative inline">
+	<button
+		[ngClass]="{
+			'bg-cyan-100 text-cyan-900 hover:bg-cyan-200 border-neutral-900 border-2':
+				kind === 'tertiary',
+			'border-2 bg-zinc-900 text-amber-300 hover:bg-zinc-800 hover:text-white': kind === 'secondary',
+			'border-2 border-neutral-900 bg-amber-300 text-neutral-900 hover:bg-amber-400':
+				kind === 'primary',
+			'cursor-not-allowed bg-neutral-500 text-neutral-700': isInactive,
+			'justify-center': isCentered || type === 'icon',
+			'justify-between': spaceIconBetween,
+			'w-full': isFullWidth,
+			'px-3 py-3 text-base': size === 'lg',
+			'px-2.5 py-[11px]': size === 'md' && type === 'icon',
+			'px-3 py-2.5': size === 'md' && type !== 'icon',
+			'py-1': size === 'sm',
+			'flex w-fit items-center justify-center  text-sm font-semibold tracking-wide ring-1 ring-inset ring-transparent transition-colors duration-150 focus:outline-none focus:ring-neutral-950 md:justify-start': true
+		}"
+        [attr.aria-label]="title"
+		(click)="onClick()"
+		[disabled]="isInactive"
+		(mouseenter)="onMouseEnter()"
+		(mouseleave)="onMouseLeave()"
+        title=""
+	>
+		<ng-icon *ngIf="icon" name="{{ icon }}" size="18"></ng-icon>
+		<span *ngIf="type === 'full'" [ngClass]="icon ? 'ml-1.5' : ''">{{
+			title
+		}}</span>
+	</button>
+	<app-tooltip
+		*ngIf="type === 'icon' && isTooltipActive"
+		[alignment]="tooltipAlignment"
+		[position]="tooltipPosition"
+		[size]="size"
+		title="{{ title }}"
+	></app-tooltip>
+</div>
