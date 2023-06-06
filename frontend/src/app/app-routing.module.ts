@@ -3,14 +3,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // pages
-import { AppComponent } from './app.component';
 import { CityComponent } from './pages/city/city.component';
+import { IndexComponent } from './pages/index/index.component';
 import { PageNotFoundComponent } from './pages/pageNotFound/pageNotFound.component';
 
 const routes: Routes = [
 	{
 		path: '',
-		children: [{ path: `city`, component: CityComponent }],
+		children: [
+			{ path: '', component: IndexComponent },
+			{ path: `city`, component: CityComponent },
+		],
 	},
 	{ path: '**', component: PageNotFoundComponent },
 ];

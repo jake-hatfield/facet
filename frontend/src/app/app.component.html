@@ -1,9 +1,7 @@
-<app-header></app-header>
-<div
-	class="relative flex h-full min-h-screen flex-col items-start overflow-hidden"
->
+<div class="relative flex min-h-screen flex-col items-start">
+	<app-header class="w-full"></app-header>
 	<main class="relative h-full w-full">
 		<router-outlet></router-outlet>
 	</main>
+	<app-footer class="mt-content w-full"></app-footer>
 </div>
-<app-footer></app-footer>

@@ -2,7 +2,15 @@
 module.exports = {
 	content: ['./src/**/*.{html,ts}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'tan-100': '#dfd7c5',
+			},
+		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/aspect-ratio'),
+		require('@tailwindcss/forms'),
+		require('tailwind-scrollbar'),
+	],
 };

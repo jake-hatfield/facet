@@ -1,0 +1,20 @@
+<p
+	aria-label="{ariaLabel}"
+	class="inline text-zinc-500 text-opacity-80"
+	*ngIf="disabled"
+>
+	{{ title }}
+</p>
+<!-- <a
+        *ngIf="!disabled"
+		aria-label={ariaLabel}
+		class={`${isBlock ? 'block' : 'inline'} ${isUnderlined ? 'link-underline' : 'link'} ${
+			icon || isExternal ? 'mr-0.5' : ''
+		} ${$$props.class ? $$props.class : ''}`}
+		{href}
+		on:click={onClick}
+		rel={isExternal ? 'noopener noreferrer' : isNoFollow ? 'nofollow' : null}
+		target={isExternal ? '_blank' : null}
+	>
+
+	</a> -->

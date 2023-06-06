@@ -1,6 +1,6 @@
 {
-	"name": "Facet",
-	"short_name": "Facet",
+	"name": "@facet",
+	"short_name": "facet",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",

@@ -1,1 +1,62 @@
-<div>FOOTER</div>
+<footer
+	aria-label="footer"
+	class="mt-auto w-full border-t-2 border-neutral-900"
+>
+	<div class="pt-content-half pb-content-half mx-auto max-w-7xl px-3 md:px-5">
+		<div class="md:grid md:grid-cols-5 md:gap-1.5 lg:gap-5">
+			<div class="md:col-span-2">
+				<!-- <a
+					aria-label="Home"
+					href="/"
+					class="link !important inline-block text-zinc-900 focus:ring-zinc-900"
+				>
+					<Logo />
+				</a> -->
+				<!-- <ul class="mt-3 flex items-center">
+					{#each communityLinks as link}
+					<li class="ml-0.5 first:ml-0">
+						<Button href={link.href} icon={link.icon} kind="secondary"
+						title={link.title} type="icon"
+						tooltipAlignment={communityLinks.indexOf(link) === 0 ? 'start' :
+						'center'} />
+					</li>
+					{/each}
+				</ul>
+				<address class="mt-1.5 max-w-md">
+					{address.line1}<br />
+					{address.line2}
+				</address> -->
+			</div>
+			<!-- <div class="mt-8 md:mt-0">
+				<p class="handwritten">Resources</p>
+				<nav>
+					<ul *ngFor="let link of resourceLinks" class="mt-3 space-y-3">
+						<li class="flex items-start">
+							<Link
+								class="{commonClasses}"
+								href="{{ link.href }}"
+								title="{{ link.title }}"
+							/>
+						</li>
+					</ul>
+				</nav>
+			</div> -->
+		</div>
+		<div class="md:flex md:items-end md:justify-between">
+			<p>&copy; {{ year }} @Facet. All rights reserved.</p>
+			<nav>
+				<ul class="mt-3 md:ml-3 md:mt-0 md:flex md:items-end">
+					<!-- {#each miscLinks as link}
+					<li class="mt-3 first:ml-0 md:mt-0 md:ml-3">
+						<Link
+							class="{commonClasses}"
+							href="{link.href}"
+							title="{link.title}"
+						/>
+					</li>
+					{/each} -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+</footer>
