@@ -4,6 +4,7 @@
 
 @import '@fontsource-variable/noto-sans-display';
 @import '@fontsource-variable/open-sans';
+@import '@fontsource/beth-ellen';
 
 html {
 	@apply body-font bg-tan-100 text-neutral-900;
@@ -33,6 +34,10 @@ body {
 
 .content-section {
 	@apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.handwritten-font {
+    font-family: 'Beth Ellen', sans-serif !important;
 }
 
 .headline-base {

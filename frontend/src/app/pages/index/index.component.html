@@ -32,7 +32,10 @@
 	class="py-content border-y-2 border-neutral-950 bg-neutral-900 text-amber-300"
 >
 	<div class="content-section">
-		<h2 class="headline-secondary">Hello</h2>
+        <header class="max-w-2xl mx-auto text-center">
+            <blockquote class="headline-secondary pb-5">"@FACET made shopping for a diamond ring easier than I ever thought possible!"</blockquote>
+            <cite class="text-neutral-400 handwritten-font text-xl">- Someone, probably</cite>
+        </header>
 	</div>
 </section>
 <section class="content-section py-content">
@@ -81,21 +84,21 @@
 			<li class="pt-12">
 				<img
 					src="/assets/rasters/diamond-ring-2.jpg"
-					alt="Man holding the hand of a woman wearing a diamond ring"
+					alt="Man sitting with a woman behind him"
 					class="shadow-stack ml-8 w-64 rotate-3 transform border-2 border-neutral-900"
 				/>
 			</li>
 			<li>
 				<img
 					src="/assets/rasters/diamond-ring-3.jpg"
-					alt="Man holding the hand of a woman wearing a diamond ring"
+					alt="Man and woman holding hands close up"
 					class="shadow-stack ml-8 w-64 border-2 border-neutral-900"
 				/>
 			</li>
 			<li class="pt-8">
 				<img
 					src="/assets/rasters/diamond-ring-4.jpg"
-					alt="Man holding the hand of a woman wearing a diamond ring"
+					alt="Man leading a woman by the hand"
 					class="shadow-stack ml-8 w-64 rotate-2 transform border-2 border-neutral-900"
 				/>
 			</li>
@@ -103,6 +106,8 @@
 	</div>
 </section>
 <app-modal *ngIf="isModalActive" title="👀 Find a jeweler near you">
-    <p description>Hello there!!!</p>
+    <div description>
+        <app-input id="text" label="Your city or ZIP code" placeholder="Houston, Texas, USA" type='text'></app-input>
+    </div>
     <!-- TODO<Jake>: Input -->
 </app-modal>
