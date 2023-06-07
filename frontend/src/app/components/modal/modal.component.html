@@ -16,20 +16,24 @@
 				</h5>
 			</header>
 			<!-- close button -->
-			<app-button icon="heroXMark" (onButtonClick)="toggleModal()" title="Close" tooltipAlignment='end' type="icon"></app-button>
+			<app-button
+				icon="heroXMark"
+				(onButtonClick)="toggleModal()"
+				title="Close"
+				tooltipAlignment="end"
+				type="icon"
+			></app-button>
 		</div>
-		<div
-				class="minimal-scrollbar max-h-96 break-words py-5 px-3 md:px-5"
-			>
-				<ng-content select="[description]"></ng-content>
-			</div>
+		<div class="minimal-scrollbar max-h-96 break-words py-5 px-3 md:px-5">
+			<ng-content select="[description]"></ng-content>
+		</div>
 
 		<!-- action -->
 		<div
 			*ngIf="hasAction"
-			class="flex justify-end border-t-2 border-neutral-950 bg-neutral-900 px-3 pb-3 pt-2 md:px-5"
+			class="flex justify-end border-t-2 border-neutral-950 bg-cyan-600 text-cyan-100 px-3 pb-3 pt-2 md:px-5"
 		>
-        <ng-content select="[action]"></ng-content>
+			<ng-content select="[action]"></ng-content>
 		</div>
 	</aside>
 </div>

@@ -8,7 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 
 // packages
 import { NgIconsModule } from '@ng-icons/core';
-import { heroExclamationCircle, heroMagnifyingGlass, heroXMark } from '@ng-icons/heroicons/outline';
+import {
+	heroCalendarDays,
+	heroExclamationCircle,
+	heroEye,
+	heroGlobeAmericas,
+	heroMagnifyingGlass,
+	heroMegaphone,
+	heroTag,
+	heroXMark,
+} from '@ng-icons/heroicons/outline';
 
 // components
 import { AppComponent } from './app.component';
@@ -35,19 +44,28 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
 		FooterComponent,
 		HeaderComponent,
 		IndexComponent,
-        InputComponent,
+		InputComponent,
 		JewelerComponent,
 		JewelersComponent,
 		LinkComponent,
 		ModalComponent,
 		PageNotFoundComponent,
-        TooltipComponent,
+		TooltipComponent,
 	],
 	imports: [
 		AppRoutingModule,
 		BrowserModule,
-        FormsModule,
-		NgIconsModule.withIcons({ heroExclamationCircle, heroMagnifyingGlass, heroXMark }),
+		FormsModule,
+		NgIconsModule.withIcons({
+			heroCalendarDays,
+			heroExclamationCircle,
+			heroEye,
+			heroGlobeAmericas,
+			heroMagnifyingGlass,
+			heroMegaphone,
+			heroTag,
+			heroXMark,
+		}),
 	],
 	providers: [],
 	bootstrap: [AppComponent],

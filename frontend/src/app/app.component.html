@@ -4,4 +4,22 @@
 		<router-outlet></router-outlet>
 	</main>
 	<app-footer class="w-full"></app-footer>
+	<app-modal
+		*ngIf="isModalActive"
+		[hasAction]="true"
+		title="👀 Find a jeweler near you"
+	>
+		<div description>
+			<app-input
+				id="text"
+				label="Your city or ZIP code"
+				placeholder="Houston, Texas, USA"
+				type="text"
+				value="Houston, Texas"
+			></app-input>
+		</div>
+		<div action>
+			<app-button icon="heroMagnifyingGlass" title="Search"></app-button>
+		</div>
+	</app-modal>
 </div>

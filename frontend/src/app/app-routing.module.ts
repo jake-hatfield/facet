@@ -13,7 +13,8 @@ const routes: Routes = [
 		path: '',
 		children: [
 			{ path: '', component: IndexComponent },
-			{ path: `city`, component: CityComponent },
+			{ path: `jewelers/:city`, component: CityComponent },
+			{ path: `jewelers/:city/:jeweler`, component: CityComponent },
 			{ path: `about`, component: AboutComponent },
 		],
 	},

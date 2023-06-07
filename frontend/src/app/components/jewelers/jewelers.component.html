@@ -1,1 +1,7 @@
-<p>jewelers works!</p>
+<section class="py-content border-y-2 border-neutral-900 bg-pattern">
+	<div class="content-section">
+		<ul *ngFor="let jeweler of jewelers" class="max-w-3xl mx-auto">
+			<app-jeweler [jeweler]="jeweler"></app-jeweler>
+		</ul>
+	</div>
+</section>

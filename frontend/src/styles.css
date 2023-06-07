@@ -15,7 +15,7 @@ body {
 }
 
 ::selection {
-	@apply bg-neutral-900 text-white;
+	@apply bg-neutral-700 text-white;
 }
 
 .body-font {
@@ -37,7 +37,7 @@ body {
 }
 
 .handwritten-font {
-    font-family: 'Beth Ellen', sans-serif !important;
+	font-family: 'Beth Ellen', sans-serif !important;
 }
 
 .headline-base {
